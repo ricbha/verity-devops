@@ -53,5 +53,12 @@ pipeline {
                 sh 'cp /var/jenkins_home/workspace/verity-devops/target/ExpenseApp-1.war /tmp/apache-tomcat-9.0.20/webapps'
             }
         }
+	stage('System Test') {
+            steps {
+				//Change git url below as per your forked github repository URL
+				git url: 'https://github.com/umangsaltuniv/EMSystemTests.git'
+            	sh 'mvn -Dtest=ExpenseManagerSystemTest test'
+            }
+        }
     }
 }
