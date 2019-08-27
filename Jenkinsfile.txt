@@ -14,6 +14,11 @@ pipeline {
             steps {
                 sh 'mvn site'
             }
+        }
+	stage('Compile') {
+            steps {
+                sh 'mvn compile'
+            }
         }		
 		// *****ALL CODE TO BE ADDED ABOVE THIS COMMENT*****
     }
