@@ -43,5 +43,10 @@ pipeline {
                 sh 'mvn install -DskipTests'
             }
         }
+	stage('Tomcat Server Up') {
+            steps {
+                sh '/tmp/apache-tomcat-9.0.20/bin/startup.sh'
+            }
+        }
     }
 }
