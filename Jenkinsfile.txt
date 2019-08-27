@@ -21,7 +21,7 @@ pipeline {
             }
         }		
 		// *****ALL CODE TO BE ADDED ABOVE THIS COMMENT*****
-    }
+    
         stage('Unit Test') {
             steps {
                 sh 'mvn test'
@@ -32,5 +32,5 @@ pipeline {
                 }
             }
         }
-
+    }
 }
