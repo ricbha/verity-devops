@@ -41,6 +41,7 @@ pipeline {
 	stage('Build') {
             steps {
                 sh 'mvn install -DskipTests'
+		//
             }
         }
 	stage('Tomcat Server Up') {
